@@ -19,7 +19,7 @@ export default function Register () {
             const res = await api.post('ongs',{
                 nome, email,whatsapp, cidade, uf
             })
-            console.log('Submetido(a)')
+            console.log('Submetida')
             alert(res.data.id)
             hist.push('/')
         } catch (erro) {

@@ -4,20 +4,27 @@ import api from '../../services/api'
 import imgLogo from '../../assets/logo.svg'
 //import imgHeroes from '../../assets/heroes.png'
 
-import {Link} from 'react-router-dom';
+import {Link,useHistory} from 'react-router-dom';
 import {FiLogOut,FiTrash2} from 'react-icons/fi'
 import './styles.css';
 
 export default function Profile () {
+    const hist = useHistory()
     const ongid = localStorage.getItem('ong_id')
     const [casos,setCasos] = useState([])
     async function handleDelete  (id){
         try{await api.delete(`casos/${id}`,{
             headers:{Authorization:ongid}})
             console.log('Caso apagado com sucesso!')
+            setCasos(casos.filter(caso=>caso.id!=id))
         }catch  (erro){
             alert('Não foi possível deletar este caso')
         }
+    }
+    function handleLogoff(){
+        localStorage.clear()
+        hist.push('/')
+      //useHistory().push('/')
     }
     useEffect(()=>{
         api.get('perfil',{headers:{Authorization:ongid}}).then(res=>{
@@ -33,7 +40,7 @@ export default function Profile () {
 
             <Link to='/casos/novo' className='button'>
                   Registrar novo caso</Link>
-            <button type='button'>
+            <button type='button' onClick={handleLogoff}>
                 <FiLogOut size={22} color="#000"/>
             </button>
         </header>
