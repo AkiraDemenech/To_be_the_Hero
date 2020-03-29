@@ -1,0 +1,46 @@
+.logon-container {
+    width: 100%;
+    max-width: 1122px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f5;
+}
+
+.logon-container section.form {
+    width: 100%;
+    max-width: 360px;
+    margin-right: 32px;
+}
+
+.logon-container section.form form {
+    margin-top: 128px;
+}
+.logon-container section.form form button {
+    margin-left: 0;
+}
+
+.logon-container section.form form h1 {
+    font-size: 32px;   
+    margin-bottom: 32px;
+}
+
+.logon-container section.form form a {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold; /* queremos negrito aqui, sim */
+    transition: opacity 0.21s;
+}
+
+.logon-container section.form form a:hover {
+    opacity: 0.8;
+}
+
+.logon-container section.form form a svg {
+    margin-right: 9px;
+}

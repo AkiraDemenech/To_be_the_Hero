@@ -1,0 +1,46 @@
+.content {
+    width: 100%;
+    max-width: 1122px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 94px;
+    background-color: #f0f0f5;
+}
+
+.content section p {
+    font-size: 19px;   
+    line-height: 33px;
+}
+
+.content section h1 {
+    font-size: 35px;   
+    margin: 64px 0 32px;
+}
+
+.content form {
+    width: 100%;
+    max-width: 360px;
+    margin-right: 32px;
+}
+.content form button {
+    margin-left: 0;
+}
+
+/*
+.content form textarea {
+    margin-top: 12px;
+}*/
+.content form input {
+    margin-top: 11px;
+}
+
+.content form .input-group {
+    display: flex;
+}
+.content form .input-group input + input {
+    margin-left: 9px;
+}
